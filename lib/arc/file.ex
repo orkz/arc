@@ -1,5 +1,5 @@
 defmodule Arc.File do
-  defstruct [:path, :file_name, :binary]
+  defstruct [:path, :file_name, :binary, :original]
 
   def generate_temporary_path(file \\ nil) do
     extension = Path.extname((file && file.path) || "")
